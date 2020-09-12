@@ -1,1 +1,1 @@
-# AutoDiagram
+# FridgeClassifier
