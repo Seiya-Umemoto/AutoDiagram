@@ -66,3 +66,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### --------------
+
+# necessary packages to be installed
+
+react bootstrap https://react-bootstrap.github.io/
+
+react-dropzone https://github.com/react-dropzone/react-dropzone
+
+axios https://github.com/axios/axios
