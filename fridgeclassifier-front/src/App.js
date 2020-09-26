@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import Button from 'react-bootstrap/Button';
 import Classifier from './components/Classifier/Classifier';
 
 function App() {
