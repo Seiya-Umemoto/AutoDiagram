@@ -15,7 +15,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from glob import glob
+import os
 
+cwd = os.path.dirname(os.path.abspath(__file__))
+os.chdir(cwd)
 
 # re-size all the images to this
 IMAGE_SIZE = [100, 100] # feel free to change depending on dataset
@@ -26,8 +29,8 @@ batch_size = 32
 
 # C:\Users\2020A00139\Desktop\FridgeClassifier\datasets
 # C:\Users\2020A00139\Desktop\FridgeClassifier\ml\vgg_seiya
-train_path = '../../datasets/Training'
-valid_path = '../../datasets/Validation'
+train_path = '../../datasets/ver1/Training_daeho'
+valid_path = '../../datasets/ver1/Testing_daeho'
 
 # useful for getting number of files
 image_files = glob(train_path + '/*/*.jp*g')
