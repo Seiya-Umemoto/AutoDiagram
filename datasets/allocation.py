@@ -3,19 +3,23 @@ import shutil, random, os
 cwd = os.path.dirname(os.path.abspath(__file__))
 os.chdir(cwd)
 
-lists = []
-
 classes = [
-    'cabbage',
-    'carrot',
-    'eggs',
-    'onion'
+    # 'cabbage',
+    # 'carrot',
+    # 'eggs',
+    # 'onion',
+    'bean_sprouts',
+    'chicken',
+    'green_onions',
+    'potatoes',
 ]
 
-dst_dir1 = './ver1/Training_daeho'
-dst_dir2 = './ver1/Testing_daeho'
+dst_dir1 = './ver1/Training_michi'
+dst_dir2 = './ver1/Testing_michi'
 
 for c in classes:
+    lists = []
+
     dst_c1 = dst_dir1 + "/" + c
     if not os.path.exists(dst_c1):
         os.mkdir(dst_c1)
@@ -42,5 +46,3 @@ for c in classes:
         if i not in lists:
             src2 = './{}/{}_{}.jpg'.format(c, c, i)           
             shutil.copy(src2, dst_c2)  
-
-    lists.clear()
