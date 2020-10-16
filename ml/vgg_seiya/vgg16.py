@@ -29,8 +29,8 @@ batch_size = 32
 
 # C:\Users\2020A00139\Desktop\FridgeClassifier\datasets
 # C:\Users\2020A00139\Desktop\FridgeClassifier\ml\vgg_seiya
-train_path = '../../datasets/ver1/Training'
-valid_path = '../../datasets/ver1/Testing'
+train_path = '../../datasets/ver2/Training'
+valid_path = '../../datasets/ver2/Testing'
 
 # useful for getting number of files
 image_files = glob(train_path + '/*/*.jp*g')
