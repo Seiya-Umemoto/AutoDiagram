@@ -21,7 +21,7 @@ cwd = os.path.dirname(os.path.abspath(__file__))
 os.chdir(cwd)
 
 # re-size all the images to this
-IMAGE_SIZE = [100, 100] # feel free to change depending on dataset
+IMAGE_SIZE = [224, 224] # feel free to change depending on dataset
 
 # training config:
 epochs = 5
@@ -29,8 +29,8 @@ batch_size = 32
 
 # C:\Users\2020A00139\Desktop\FridgeClassifier\datasets
 # C:\Users\2020A00139\Desktop\FridgeClassifier\ml\vgg_seiya
-train_path = '../../datasets/ver2/Training'
-valid_path = '../../datasets/ver2/Testing'
+train_path = '../../datasets/ver1/Training_daeho'
+valid_path = '../../datasets/ver1/Testing_daeho'
 
 # useful for getting number of files
 image_files = glob(train_path + '/*/*.jp*g')
@@ -67,7 +67,7 @@ model.summary()
 # tell the model what cost and optimization method to use
 model.compile(
   loss='categorical_crossentropy',
-  optimizer='rmsprop',
+  optimizer='Adam',
   metrics=['accuracy']
 )
 
@@ -127,7 +127,7 @@ r = model.fit_generator(
   validation_steps=len(valid_image_files) // batch_size,
 )
 
-
+r.save("fridgeCF")
 
 def get_confusion_matrix(data_path, N):
   # we need to see the data in the same order

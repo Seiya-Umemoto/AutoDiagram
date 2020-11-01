@@ -42,11 +42,3 @@ def plot_confusion_matrix(cm, classes,
   plt.ylabel('True label')
   plt.xlabel('Predicted label')
   plt.show()
-
-
-def y2indicator(Y):
-  K = len(set(Y))
-  N = len(Y)
-  I = np.empty((N, K))
-  I[np.arange(N), Y] = 1
-  return I
