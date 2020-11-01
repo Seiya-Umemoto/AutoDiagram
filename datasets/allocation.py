@@ -4,18 +4,18 @@ cwd = os.path.dirname(os.path.abspath(__file__))
 os.chdir(cwd)
 
 classes = [
-    # 'cabbage',
-    # 'carrot',
-    # 'eggs',
-    # 'onion',
+    'cabbage',
+    'carrot',
+    'eggs',
+    'onion',
     'bean_sprouts',
     'chicken',
     'green_onions',
     'potatoes',
 ]
 
-dst_dir1 = './ver1/Training_michi'
-dst_dir2 = './ver1/Testing_michi'
+dst_dir1 = './test_ver/test_Training'
+dst_dir2 = './test_ver/test_Testing'
 
 for c in classes:
     lists = []
