@@ -26,7 +26,6 @@ class Image(models.Model):
         img_array = image.img_to_array(img)
         to_pred = np.expand_dims(img_array, axis=0) #(1, 225, 225, 3)
         try:
-            print(settings.BASE_DIR)
             file_model = os.path.join(os.path.dirname(settings.BASE_DIR), 'model/fridgeCF2.h5')
             graph = ops.get_default_graph()
             
