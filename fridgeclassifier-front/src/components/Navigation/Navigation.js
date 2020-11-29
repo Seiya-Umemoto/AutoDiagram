@@ -8,6 +8,7 @@ const Navigation = () => {
             <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/list">Images</Nav.Link>
+            <Nav.Link href="/menu">Menu</Nav.Link>
             </Nav>
         </Navbar>
      );

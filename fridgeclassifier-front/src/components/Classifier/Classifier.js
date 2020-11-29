@@ -28,7 +28,7 @@ class Classifier extends Component {
             }, () => {
                 console.log(this.state.files[0].name)
             })
-        }, 1000);    
+        }, 1000);
      }
 
      activateSpinner =()=> {
