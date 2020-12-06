@@ -28,15 +28,28 @@ class Menu extends Component {
             }  
         })
         .then(resp=>{
-            console.log(resp.data[0].classified)
-            this.fetchRecipes(resp.data[0].classified)
+            let ingredients = resp.data
+            console.log(ingredients.slice(ingredients.length-3, ingredients.length))
+            if (ingredients.length >=3 ) {
+                this.fetchRecipes(ingredients.slice(ingredients.length-3, ingredients.length))
+            } else if (ingredients.length == 2) {
+                this.fetchRecipes(ingredients.slice(ingredients.length-2, ingredients.length))
+            } else if (ingredients.length == 1) {
+                this.fetchRecipes(ingredients[ingredients.length-1])
+            }
         })
         .catch(err=>{
             console.log(err)
         })
     }
 
-    fetchRecipes = (name) => {
+    fetchRecipes = (ingredients) => {
+        let name = "";
+        ingredients.forEach(element => {
+            name += element.classified
+            name += `,`
+        });
+        console.log(name)
         axios.get(`https://api.edamam.com/search?q=${name}&ingr=10&time=30&app_id=bb0e720d&app_key=043f045e14d2b7cf226ebf4323358470&`)
         .then(resp=>{
             this.setState({hits: resp.data.hits})

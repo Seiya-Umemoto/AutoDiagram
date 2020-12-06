@@ -12,3 +12,7 @@
 .back:hover{
     border: 3px dashed deepskyblue;
 }
+
+.background{
+    /* background-image: url(../../media/background.jpg); */
+}
