@@ -78,19 +78,19 @@ class Classifier extends Component {
         this.deactivateSpinner()
      }
 
-    setRef = (webcam) => {
-        this.webcam = webcam;
-    }
+    // setRef = (webcam) => {
+    //     this.webcam = webcam;
+    // }
 
-    screenShot = () => {
-        const imageSrc = this.webcam.getScreenshot();
-        const blob = fetch(imageSrc).then((res) => res.blob());
-        console.log(blob)
-        this.setState({files:[]})
-        this.state.files.push(blob);
-        console.log(typeof blob)
-        this.sendImage();
-    }
+    // screenShot = () => {
+    //     const imageSrc = this.webcam.getScreenshot();
+    //     const blob = fetch(imageSrc).then((res) => res.blob());
+    //     console.log(imageSrc)
+    //     this.setState({files:[]})
+    //     this.state.files.push(blob);
+    //     console.log(typeof blob)
+    //     this.sendImage();
+    // }
 
     render() { 
         const files = this.state.files.map(file => (
@@ -99,7 +99,7 @@ class Classifier extends Component {
             </li>
           ));
         return ( 
-            <div>
+            // <div>
             <Dropzone onDrop={this.onDrop} accept='image/png, image/jpeg'> 
             {({isDragActive, getRootProps, getInputProps}) => (
                 <section className="container">
@@ -131,13 +131,13 @@ class Classifier extends Component {
                 </section>
             )}
             </Dropzone>
-            <Webcam
-                audio = {false}
-                ref = {this.setRef}
-                screenshotFormat="image/jpeg"
-            />
-            <Button variant='info' size='lg' className='mt-3' onClick={this.screenShot}>Take a picture</Button>
-            </div>
+            // {/* <Webcam
+            //     audio = {false}
+            //     ref = {this.setRef}
+            //     screenshotFormat="image/jpeg"
+            // /> */}
+            // {/* <Button variant='info' size='lg' className='mt-3' onClick={this.screenShot}>Take a picture</Button> */}
+            // {/* </div> */}
          );
     }
 }

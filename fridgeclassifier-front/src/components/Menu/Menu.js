@@ -5,6 +5,7 @@ import RecipeContainer from "./RecipeContainer";
 
 class Menu extends Component {
     state = { 
+        button: false,
         hits: [],
         isLoading: false,
     }
@@ -21,6 +22,7 @@ class Menu extends Component {
     }
 
     fetchIngredients = () => {
+        this.setState({button: true})
         this.activateSpinner()
         axios.get('http://127.0.0.1:8000/api/images/', {
             headers: {
@@ -28,14 +30,14 @@ class Menu extends Component {
             }  
         })
         .then(resp=>{
-            let ingredients = resp.data
-            console.log(ingredients.slice(ingredients.length-3, ingredients.length))
-            if (ingredients.length >=3 ) {
-                this.fetchRecipes(ingredients.slice(ingredients.length-3, ingredients.length))
-            } else if (ingredients.length == 2) {
-                this.fetchRecipes(ingredients.slice(ingredients.length-2, ingredients.length))
-            } else if (ingredients.length == 1) {
-                this.fetchRecipes(ingredients[ingredients.length-1])
+            let ingrs = resp.data
+            console.log(ingrs.slice(ingrs.length-3, ingrs.length))
+            if (ingrs.length >=3 ) {
+                this.fetchRecipes(ingrs.slice(ingrs.length-3, ingrs.length))
+            } else if (ingrs.length == 2) {
+                this.fetchRecipes(ingrs.slice(ingrs.length-2, ingrs.length))
+            } else if (ingrs.length == 1) {
+                this.fetchRecipes(ingrs.slice(ingrs.length-1, ingrs.length))
             }
         })
         .catch(err=>{
@@ -43,9 +45,9 @@ class Menu extends Component {
         })
     }
 
-    fetchRecipes = (ingredients) => {
+    fetchRecipes = (ingrs) => {
         let name = "";
-        ingredients.forEach(element => {
+        ingrs.forEach(element => {
             name += element.classified
             name += `,`
         });
@@ -71,7 +73,9 @@ class Menu extends Component {
                 {this.state.isLoading && 
                     <Spinner animation="border" role="status"></Spinner>
                 }
-                <RecipeContainer hits={this.state.hits} />
+                {this.state.button &&
+                    <RecipeContainer hits={this.state.hits} />
+                }
             </div>
         );
     }
