@@ -1,12 +1,20 @@
-## FridgeClassifier
+# FridgeClassifier
 Web Application for automating the process of storing ingredients and recommending recipes
 
-# Description
-![image1](https://github.com/Seiya-Umemoto/FridgeClassifier/blob/master/readme/smartrg1.jpg)
+## Purpose
+In order to solve the problem where the space of the fridge for common use in the university dormitory is in short.
+![image1](https://github.com/Seiya-Umemoto/FridgeClassifier/blob/master/readme/smartrg1.jpg?raw=true)
 
-![image2](https://github.com/Seiya-Umemoto/FridgeClassifier/blob/master/readme/smartrg2.jpg)
+## Configuration
+![image2](https://github.com/Seiya-Umemoto/FridgeClassifier/blob/master/readme/smartrg2.jpg?raw=true)
 
-# Necessary packages for backend (Django)
+# Video
+[![demo_video](https://github.com/Seiya-Umemoto/FridgeClassifier/blob/master/readme/smartrg_demo_pic.PNG?raw=true)](https://sunmoonackr-my.sharepoint.com/:v:/g/personal/seiyau77_sunmoon_ac_kr/EQ__guHCbopBgJnv2--bi2EBhOX4FvbBFYNKVGtG-Es2vg?e=nq7aCL)
+
+## Future plan
+Introduce a raspberry pi camera and an audio input to recognize actual ingredients stored in a fridge.
+
+## Necessary packages for backend (Django)
 - absl-py==0.9.0
 - astor==0.8.1
 - cachetools==4.0.0
@@ -54,7 +62,7 @@ Web Application for automating the process of storing ingredients and recommendi
 - Werkzeug==0.16.0
 - wrapt==1.11.2
 
-# Necessary packages for front end (React)
+## Necessary packages for front end (React)
 - "axios": "^0.20.0",
 - "bootstrap": "^4.5.2",
 - "react-bootstrap": "^1.3.0",
