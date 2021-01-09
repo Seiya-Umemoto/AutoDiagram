@@ -8,7 +8,7 @@ In order to solve the problem where the space of the fridge for common use in th
 ## Configuration
 ![image2](https://github.com/Seiya-Umemoto/FridgeClassifier/blob/master/readme/smartrg2.jpg?raw=true)
 
-# Demo Video
+## Demo Video
 [![demo_video](https://github.com/Seiya-Umemoto/FridgeClassifier/blob/master/readme/smartrg_demo_pic.PNG?raw=true)](https://sunmoonackr-my.sharepoint.com/:v:/g/personal/seiyau77_sunmoon_ac_kr/EQ__guHCbopBgJnv2--bi2EBhOX4FvbBFYNKVGtG-Es2vg?e=nq7aCL)
 
 ## Future plan
