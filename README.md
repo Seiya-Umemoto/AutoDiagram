@@ -1,6 +1,11 @@
 # FridgeClassifier
 Web Application for automating the process of storing ingredients and recommending recipes
 
+## Roles
+- **Seiya Umemoto**: Project Manager, Front and Backend development
+- **Takamichi Nomura**: AI model Tuning
+- **Daeho Bang**: Data Collection, Data Preprocessing
+
 ## Purpose
 In order to solve the problem where the space of the fridge for common use in the university dormitory is in short.
 ![image1](https://github.com/Seiya-Umemoto/FridgeClassifier/blob/master/readme/smartrg1.jpg?raw=true)
